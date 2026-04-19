@@ -55,7 +55,7 @@ export function ParallaxScene() {
           className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center"
           style={{ transform: `translateY(${y * -0.2}px)`, opacity: Math.max(0, 1 - y / 600) }}
         >
-          <p className="font-sans-ui text-xs uppercase tracking-[0.4em] text-aurora-2/90 text-glow">
+          <p className="font-sans-ui text-xs uppercase tracking-[0.4em] text-[oklch(0.78_0.15_30)] text-glow">
             A parallax journey
           </p>
           <h1 className="font-display mt-4 text-6xl font-light leading-[0.95] text-foreground text-glow sm:text-8xl md:text-[10rem]">
@@ -137,7 +137,7 @@ export function ParallaxScene() {
         />
 
         <div className="relative z-10 mx-auto flex h-full max-w-3xl flex-col items-center justify-center px-6 text-center">
-          <span className="font-sans-ui text-xs uppercase tracking-[0.4em] text-aurora-3">
+          <span className="font-sans-ui text-xs uppercase tracking-[0.4em] text-[oklch(0.85_0.12_60)]">
             Chapter II
           </span>
           <h2 className="font-display mt-3 text-5xl font-light italic text-foreground text-glow sm:text-7xl">
