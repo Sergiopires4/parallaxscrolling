@@ -102,7 +102,18 @@ const FAVOURITES = {
 
 /* ============================ COMPONENTS ============================ */
 
-function PortfolioPage() {
+export default function PortfolioPage() {
+  useEffect(() => {
+    document.title = "Alex Rivera — Developer, Student, Coffee Optimist";
+    let m = document.querySelector('meta[name="description"]') as HTMLMetaElement | null;
+    if (!m) {
+      m = document.createElement("meta");
+      m.name = "description";
+      document.head.appendChild(m);
+    }
+    m.content =
+      "Personal portfolio of Alex Rivera: projects, academic journey, services, and favourites. Built with responsive web design.";
+  }, []);
   return (
     <div className="portfolio-root min-h-screen">
       <Nav />
