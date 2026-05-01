@@ -417,9 +417,9 @@ function Footer() {
           <a href={PROFILE.linkedin} target="_blank" rel="noreferrer" className="hover:text-[var(--accent)]">
             LinkedIn ↗
           </a>
-          <Link to="/" className="hover:text-[var(--accent)]">
+          <a href="#/" className="hover:text-[var(--accent)]">
             ← Back to parallax
-          </Link>
+          </a>
           <p className="mt-6 text-[var(--cream)]/40">
             © {new Date().getFullYear()} {PROFILE.name}. Built with care, RWD, and too much chai.
           </p>
