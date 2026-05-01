@@ -1,19 +1,5 @@
 import { useEffect, useState } from "react";
 
-export default function PortfolioPage() {
-  useEffect(() => {
-    document.title = "Alex Rivera — Developer, Student, Coffee Optimist";
-    const meta =
-      document.querySelector('meta[name="description"]') ??
-      document.head.appendChild(Object.assign(document.createElement("meta"), { name: "description" }));
-    meta.setAttribute(
-      "content",
-      "Personal portfolio of Alex Rivera: projects, academic journey, services, and favourites. Built with responsive web design.",
-    );
-  }, []);
-  return <PortfolioInner />;
-}
-
 /* ============================ DATA (edit me) ============================ */
 
 const PROFILE = {
