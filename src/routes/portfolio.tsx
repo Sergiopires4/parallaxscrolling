@@ -1,24 +1,18 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 
-export const Route = createFileRoute("/portfolio")({
-  head: () => ({
-    meta: [
-      { title: "Alex Rivera — Developer, Student, Coffee Optimist" },
-      {
-        name: "description",
-        content:
-          "Personal portfolio of Alex Rivera: projects, academic journey, services, and favourites. Built with responsive web design.",
-      },
-      { property: "og:title", content: "Alex Rivera — Portfolio" },
-      {
-        property: "og:description",
-        content: "Projects, academics, and the things I love — in one responsive page.",
-      },
-    ],
-  }),
-  component: PortfolioPage,
-});
+export default function PortfolioPage() {
+  useEffect(() => {
+    document.title = "Alex Rivera — Developer, Student, Coffee Optimist";
+    const meta =
+      document.querySelector('meta[name="description"]') ??
+      document.head.appendChild(Object.assign(document.createElement("meta"), { name: "description" }));
+    meta.setAttribute(
+      "content",
+      "Personal portfolio of Alex Rivera: projects, academic journey, services, and favourites. Built with responsive web design.",
+    );
+  }, []);
+  return <PortfolioInner />;
+}
 
 /* ============================ DATA (edit me) ============================ */
 
