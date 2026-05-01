@@ -153,10 +153,10 @@ function Nav() {
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 md:px-8">
-        <Link to="/portfolio" className="font-display text-xl tracking-tight text-[var(--ink)]">
+        <a href="#/portfolio" className="font-display text-xl tracking-tight text-[var(--ink)]">
           {PROFILE.name.split(" ")[0]}
           <span className="text-[var(--accent)]">.</span>
-        </Link>
+        </a>
         <nav className="hidden items-center gap-7 font-mono text-xs uppercase tracking-widest text-[var(--ink)]/70 md:flex">
           {links.map(([label, href]) => (
             <a key={href} href={href} className="hover:text-[var(--accent)]">
